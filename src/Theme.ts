@@ -6,11 +6,11 @@ export const Theme = {
   global: {
     colors: {
       brand: {
-        dark: "#001b38",
-        light: "#37a4ff",
+        dark: "#250c44",
+        light: "#c0ffc0",
       },
       background: {
-        dark: "#111111",
+        dark: "#333232",
         light: "#FFFFFF",
       },
       "background-back": {
