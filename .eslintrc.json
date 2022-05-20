@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "prettier",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "camelcase": ["error", {"properties": "never", "ignoreDestructuring": true}],
+        "@typescript-eslint/member-ordering": "error",
+        "no-use-before-define": "off",
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"],
+        "no-console": [ "error", { "allow": ["error"] } ],
+        "quotes": ["error", "double"]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    }
+}

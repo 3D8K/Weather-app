@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Grommet as GrommetProvider } from "grommet";
+import { Layout } from "./layout";
+import { Theme } from "./Theme";
+import { themeStore } from "./store/ThemeStore";
+import { observer } from "mobx-react";
 
-function App() {
+export const App = observer(() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GrommetProvider theme={Theme} themeMode={themeStore.themeMode} full>
+      <Layout />
+    </GrommetProvider>
   );
-}
+});
 
 export default App;
