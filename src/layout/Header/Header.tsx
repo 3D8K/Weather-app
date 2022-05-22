@@ -1,8 +1,9 @@
 import React, { FC } from "react";
-import { Header, Anchor, CheckBox, Box } from "grommet";
+import { Header, Anchor, Box } from "grommet";
 import { Cloud as IconCloud } from "grommet-icons";
 import { themeStore } from "../../store/ThemeStore";
 import { observer } from "mobx-react";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 export const HeaderComponent: FC = observer(() => {
   const themeChange = () => {
@@ -11,10 +12,10 @@ export const HeaderComponent: FC = observer(() => {
       : themeStore.setDark();
   };
   return (
-    <Header direction="row" background="brand" flex={false}>
+    <Header direction="row" background="brand" flex={false} elevation="small">
       <Anchor
         href="/"
-        color="text"
+        color="header-text"
         margin="medium"
         size="large"
         label="Weather check"
@@ -22,7 +23,10 @@ export const HeaderComponent: FC = observer(() => {
         gap="small"
       />
       <Box margin="medium" round="medium">
-        <CheckBox toggle onClick={themeChange} />
+        <DarkModeToggle
+          onChange={themeChange}
+          checked={themeStore.themeMode === "dark"}
+        />
       </Box>
     </Header>
   );

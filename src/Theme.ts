@@ -6,8 +6,9 @@ export const Theme = {
   global: {
     colors: {
       brand: {
-        dark: "#250c44",
-        light: "#c0ffc0",
+        dark: "linear-gradient(33deg, rgba(0,212,255,1) 0%, rgba(126,152,246,1) 0%, rgba(2,0,36,1) 48%, rgba(2,0,36,1) 87%)",
+        light:
+          "linear-gradient(33deg, rgba(0,80,255,1) 15%, rgba(0,212,255,1) 46%, rgba(162,239,247,1) 72%)",
       },
       background: {
         dark: "#333232",
@@ -28,6 +29,10 @@ export const Theme = {
       text: {
         dark: "#EEEEEE",
         light: "#333333",
+      },
+      "header-text": {
+        light: "#EEEEEE",
+        dark: "#EEEEEE",
       },
       "text-strong": {
         dark: "#FFFFFF",
@@ -67,19 +72,6 @@ export const Theme = {
     background: {
       dark: "#111111",
       light: "#FFFFFF",
-    },
-  },
-  checkBox: {
-    color: {
-      light: "#FFFFFF",
-      dark: "#111111",
-    },
-    toggle: {
-      background: { light: "#111111", dark: "#FFFFFF" },
-      color: {
-        light: "#FFFFFF",
-        dark: "#111111",
-      },
     },
   },
 };
